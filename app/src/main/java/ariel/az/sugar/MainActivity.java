@@ -2,6 +2,7 @@ package ariel.az.sugar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,11 +40,21 @@ public class MainActivity extends AppCompatActivity {
                 editTextEdicion.setText(book.getEdition());
             }
         });
-
         ButtonConsultaGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BooklistActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        ButtonModificar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Book book = Book.findById(Book.class, Long.parseLong("1"));
+                book.title = "update  title here";
+                book.edition = "3rd edition";
+                book.save();
             }
         });
 
@@ -51,12 +62,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Book registro1 = new Book(
-                    editTextTitulo.getText().toString(),
-                    editTextEdicion.getText().toString());
+                        editTextTitulo.getText().toString(),
+                        editTextEdicion.getText().toString());
                 registro1.save();
-                    Log.e("Guardar", "Datos guardados");
-                }
+                Log.e("Guardar", "Datos guardados!");
+            }
         });
+        ButtonEliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Book book = Book.findById(Book.class, Long.parseLong("1"));
+                book.delete();
+            }
+
+        });
+
+
+
 
     }
 
