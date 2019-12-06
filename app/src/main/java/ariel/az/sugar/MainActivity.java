@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     Button ButtonGuardar, ButtonModificar, ButtonEliminar,
-    ButtonConsultaGenral;
+    ButtonConsultaGeneral, ButtonconsultaIndividual, ButtoneliminarTodo;
     EditText editTextTitulo, editTextEdicion, editTextID;
 
     @Override
@@ -23,8 +23,29 @@ public class MainActivity extends AppCompatActivity {
         editTextID = findViewById(R.id.editTextID);
         ButtonGuardar = findViewById(R.id.buttonGuardar);
         ButtonModificar = findViewById(R.id.buttonModificar);
+        ButtonConsultaGeneral = findViewById(R.id.buttonConsultaGeneral);
+        ButtonconsultaIndividual = findViewById(R.id.buttonconsultaIndividual);
         ButtonEliminar = findViewById(R.id.buttonEliminar);
-        ButtonConsultaGenral = findViewById(R.id.buttonConsultaGeneral);
+        ButtoneliminarTodo = findViewById(R.id.buttoneliminarTodo);
+
+        ButtonconsultaIndividual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Book book = Book.findById(
+                Book.class,
+                        Long.parseLong(editTextID.getText().toString()
+                        ));
+                editTextTitulo.setText(book.getTitle());
+                editTextEdicion.setText(book.getEdition());
+            }
+        });
+
+        ButtonConsultaGeneral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         ButtonGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,4 +59,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }

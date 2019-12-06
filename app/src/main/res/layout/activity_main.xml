@@ -11,26 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/editTextDos"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="0.158" />
 
     <EditText
         android:id="@+id/editTextTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/editTextUno"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/buttonGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="432dp"
+        android:layout_marginBottom="388dp"
         android:hint="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,18 +48,18 @@
         android:id="@+id/buttonModificar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="376dp"
+        android:layout_marginBottom="332dp"
         android:hint="@string/buttonDos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="328dp"
+        android:layout_marginBottom="276dp"
         android:hint="@string/buttonTres"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +70,7 @@
         android:id="@+id/buttonConsultaGeneral"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="276dp"
+        android:layout_marginBottom="216dp"
         android:hint="@string/buttonCuatro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,14 +82,15 @@
         android:id="@+id/editTextID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="224dp"
         android:ems="10"
         android:hint="@string/editTextTres"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
 
     <Button
         android:id="@+id/buttonconsultaIndividual"
@@ -92,9 +99,10 @@
         android:text="consulta indiviual"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintVertical_bias="0.855" />
 
     <Button
         android:id="@+id/buttoneliminarTodo"
@@ -103,10 +111,10 @@
         android:text="eliminar todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.945" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
