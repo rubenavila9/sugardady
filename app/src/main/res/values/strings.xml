@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">sugar</string>
+    <string name="editTextUno">Ingrese titulo</string>
+    <string name="editTextDos">Ingrese la edicion</string>
+    <string name="editTextTres">Escriba la ID del libro</string>
+    <string name="button">Guardar</string>
+    <string name="buttonDos">Modificar</string>
+    <string name="buttonTres">Eliminar</string>
+    <string name="buttonCuatro">Consulta General</string>
+</resources>
